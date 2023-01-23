@@ -9,6 +9,16 @@ function getBooksRepository() {
   return result;
 }
 
+function idBooksRepository({id}:{id:string}) {
+  const result = connection.query(
+    `
+     SELECT * FROM books where id =${id};
+    `
+  );
+  return result;
+}
+
+
 function postBooksRepository({
   name,
   description,
@@ -69,7 +79,7 @@ function deleteBooksRepository({ bookId }: { bookId: number }) {
   );
   return result;
 }
-function allBooksRepository() {
+function allBooksRepository({fil}:{fil:string}) {
   const result = connection.query(
     `
       SELECT  
@@ -80,7 +90,7 @@ function allBooksRepository() {
       FROM books
       inner JOIN authors
       ON books."authorId" = authors.id
-      where books.classification > 10
+      where books.classification > ${fil}
       order by books.classification desc;
     `
   );
@@ -93,4 +103,5 @@ export {
   updateBooksRepository,
   deleteBooksRepository,
   allBooksRepository,
+  idBooksRepository
 };
