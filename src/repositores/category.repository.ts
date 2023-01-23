@@ -29,4 +29,14 @@ function postCategoriesRepository({
   return result;
 }
 
-export { getCategoriesRepository, postCategoriesRepository };
+function consultCategoriesRepository({name}:{name:string}) {
+  const queryExemple = connection.query(
+    `
+      SELECT  FROM categories WHERE name ='${name}';     
+ 
+    `
+  );
+  return queryExemple;
+}
+
+export { getCategoriesRepository, postCategoriesRepository, consultCategoriesRepository };
