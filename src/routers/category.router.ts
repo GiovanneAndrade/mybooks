@@ -1,5 +1,7 @@
 import { Router } from "express"
 import { getCategoriesController, postCategoriesController } from "../controllers/category.controller.js"
+import postCategorySchema from "../schemas/category.schamas.js"
+import { validateSchema } from "../schemas/shemaValidation.js"
  
      
     
@@ -7,7 +9,7 @@ import { getCategoriesController, postCategoriesController } from "../controller
 const router = Router()
 
 router.get('/categories', getCategoriesController)
-router.post('/categories', postCategoriesController)
+router.post('/categories', validateSchema(postCategorySchema), postCategoriesController)
 
    
 export default router
