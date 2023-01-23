@@ -11,11 +11,15 @@ async function getCategoriesController(req: Request, res: Response) {
 }
 
 async function postCategoriesController(req: Request, res: Response) {
+
   const {
     name,
   }: {
     name: string;
   } = req.body;
+  const result = await allCategories.consultCategoriesRepository({name});
+
+  if(result.rows.length > 0) return res.status(404).send('categoria ja existe')
   try {
     await allCategories.postCategoriesRepository({
       name,
