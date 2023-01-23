@@ -37,7 +37,7 @@ async function postBooksController(req: Request, res: Response) {
 
 async function updateBooksController(req: Request, res: Response) {
   const { id } = req.params;
-  const bookId =  Number(id)
+  const bookId = Number(id);
   const {
     name,
     description,
@@ -55,7 +55,7 @@ async function updateBooksController(req: Request, res: Response) {
       description,
       classification,
       authorId,
-      bookId
+      bookId,
     });
     return res.sendStatus(201);
   } catch (error) {
@@ -65,33 +65,28 @@ async function updateBooksController(req: Request, res: Response) {
 
 async function deleteBooksController(req: Request, res: Response) {
   const { id } = req.params;
-  const bookId =  Number(id)
+  const bookId = Number(id);
   try {
-    await allBooks.deleteBooksRepository({bookId});
+    await allBooks.deleteBooksRepository({ bookId });
     return res.sendStatus(200);
   } catch (error) {
     return res.sendStatus(500).send(error);
   }
 }
 async function allBooksController(req: Request, res: Response) {
-
+  const { fil } = req.params
   try {
-   const result = await allBooks.allBooksRepository();
-   const ordersList = result.rows.map(
-    i => (
-      {
-        
-          author: i.author,
-        
-        books: {
-          id: i.id,
-          name: i.name,
-          classification: i.classification,
-          description: i.description
-        }
-      }
-    )
- )  
+    const result = await allBooks.allBooksRepository({fil});
+    const ordersList = result.rows.map((i) => ({
+      author: i.author,
+
+      books: {
+        id: i.id,
+        name: i.name,
+        classification: i.classification,
+        description: i.description,
+      },
+    }));
     return res.send(ordersList);
   } catch (error) {
     return res.sendStatus(500).send(error);
@@ -103,5 +98,5 @@ export {
   postBooksController,
   updateBooksController,
   deleteBooksController,
-  allBooksController
+  allBooksController,
 };
