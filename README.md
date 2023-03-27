@@ -31,11 +31,12 @@ mybooks é um aplicativo de navegador da web com o qual você pode gerenciar ent
 ## post http://localhost:4000/author
   
   deve enviar o exemplo abaixo
-
+```json
   {
     "name": "naruto",
     "idade": 25
   }
+```
   status: 201 Created
   * todosos campos são obrigatórios 
 
