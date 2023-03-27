@@ -11,9 +11,8 @@ mybooks é um aplicativo de navegador da web com o qual você pode gerenciar ent
 ## Exemplo
 
 ## get http://localhost:4000/author
-
+ deve retornar o exemplo abaixo
 ```json
-  deve retornar o exemplo abaixo
   [
     {
       "id": 1,
@@ -161,6 +160,6 @@ deve enviar o exemplo abaixo
    "name": "Humor"
   }
 ```
-    status: 201 Created
-    o campo name obrigatório
-    Essa rota lista todas as categorias
+status: 201 Created
+o campo name obrigatório
+Essa rota lista todas as categorias
