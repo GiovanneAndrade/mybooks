@@ -10,7 +10,7 @@
 
 ## Exemplo
 
-## get http://localhost:4000/author
+## get `/author`
 - deve retornar o exemplo abaixo
 ```json
   [
@@ -29,7 +29,7 @@
 
 * status: 200 ok
 
-## post http://localhost:4000/author
+## post `/author`
 
 deve enviar o exemplo abaixo
 
@@ -43,7 +43,7 @@ deve enviar o exemplo abaixo
 * status: 201 Created
 * todosos campos são obrigatórios
 
-## get http://localhost:4000/books
+## get `/books`
 
 - deve retornar o exemplo abaixo
 
@@ -66,7 +66,7 @@ deve enviar o exemplo abaixo
   ]
 ```
 
-## post http://localhost:4000/books
+## post `/books`
 
 - deve enviar o exemplo abaixo
 ```json
@@ -82,7 +82,7 @@ deve enviar o exemplo abaixo
 * authorId deve ser um id existente,
 * Deve enviar um id existente pelo params
 
-## put http://localhost:4000/books/:id
+## put `/books/:id`
 
 - deve enviar o exemplo abaixo
 ```json
@@ -98,7 +98,7 @@ deve enviar o exemplo abaixo
 * authorId deve ser um id existente,
 * Deve enviar um id existente pelo params
 
-## get http://localhost:4000/books/all/:id
+## get `/books/all/:id`
 
 - deve receber o exemplo abaixo
 ```json
@@ -126,7 +126,7 @@ deve enviar o exemplo abaixo
 A ordem dos books estão em decrescente de acordo com a classificação e
 devera ser passado como params um numero de filtragem da classificação que desejar ver exemplo: se passar 10 so sera mostrado os books com classificação maior que 10
 
-## get http://localhost:4000/categories
+## get `/categories`
 
 - deve receber o exemplo abaixo
 ```json
@@ -151,7 +151,7 @@ devera ser passado como params um numero de filtragem da classificação que des
 ```
 * Essa rota lista todas as categorias
 
-## post http://localhost:4000/categories
+## post  `/categories`
 
 - deve enviar o exemplo abaixo
 ```json
