@@ -96,7 +96,7 @@ deve enviar o exemplo abaixo
 * status: 201 Created \* todosos campos são obrigatórios,
 * classification deve ser um numero,
 * authorId deve ser um id existente,
-* Deve enviar um id existente pelo params
+* Deve enviar um id de um booking existente pelo params
 
 ## get `/books/all/:id`
 
