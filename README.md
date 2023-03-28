@@ -129,7 +129,7 @@ A ordem dos books estão em decrescente de acordo com a classificação e
 devera ser passado como params um numero de filtragem da classificação que desejar ver exemplo: se passar 10 so sera mostrado os books com classificação maior que 10
 
 ## get `/categories`
- <td>Adicionando uma dependência</td>
+
 - deve receber o exemplo abaixo
 ```json
   [
