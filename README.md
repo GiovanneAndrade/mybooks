@@ -1,17 +1,17 @@
 # mybooks
 
-uma pequena pratica sobre o typescript
+  uma pequena pratica sobre o typescript
 
 ## Detalhes
 
-mybooks é um aplicativo de navegador da web com o qual você pode gerenciar entrada e saida de livros na plataforma.
+   mybooks é um aplicativo de navegador da web com o qual você pode gerenciar entrada e saida de livros na plataforma.
 
 ## como testar as rotas ?
 
 ## Exemplo
 
 ## get http://localhost:4000/author
- deve retornar o exemplo abaixo
+- deve retornar o exemplo abaixo
 ```json
   [
     {
@@ -27,7 +27,7 @@ mybooks é um aplicativo de navegador da web com o qual você pode gerenciar ent
   ]
 ```
 
-status: 200 ok
+* status: 200 ok
 
 ## post http://localhost:4000/author
 
@@ -40,13 +40,12 @@ deve enviar o exemplo abaixo
 }
 ```
 
-status: 201 Created
-
-- todosos campos são obrigatórios
+* status: 201 Created
+* todosos campos são obrigatórios
 
 ## get http://localhost:4000/books
 
-deve retornar o exemplo abaixo
+- deve retornar o exemplo abaixo
 
 ```json
   [
@@ -69,7 +68,7 @@ deve retornar o exemplo abaixo
 
 ## post http://localhost:4000/books
 
-deve enviar o exemplo abaixo
+- deve enviar o exemplo abaixo
 ```json
   {
     "name": "teste 10",
@@ -78,14 +77,14 @@ deve enviar o exemplo abaixo
     "authorId": 1
   }
 ```
-status: 201 Created \* todosos campos são obrigatórios
-classification deve ser um numero,
-authorId deve ser um id existente,
-Deve enviar um id existente pelo params
+* status: 201 Created \* todosos campos são obrigatórios,
+* classification deve ser um numero,
+* authorId deve ser um id existente,
+* Deve enviar um id existente pelo params
 
 ## put http://localhost:4000/books/:id
 
-deve enviar o exemplo abaixo
+- deve enviar o exemplo abaixo
 ```json
   {
     "name": "teste 10",
@@ -94,14 +93,14 @@ deve enviar o exemplo abaixo
     "authorId": 1
   }
 ```
-status: 201 Created \* todosos campos são obrigatórios
-classification deve ser um numero,
-authorId deve ser um id existente,
-Deve enviar um id existente pelo params
+* status: 201 Created \* todosos campos são obrigatórios,
+* classification deve ser um numero,
+* authorId deve ser um id existente,
+* Deve enviar um id existente pelo params
 
 ## get http://localhost:4000/books/all/:id
 
-deve receber o exemplo abaixo
+- deve receber o exemplo abaixo
 ```json
   [
     {
@@ -129,7 +128,7 @@ devera ser passado como params um numero de filtragem da classificação que des
 
 ## get http://localhost:4000/categories
 
-deve receber o exemplo abaixo
+- deve receber o exemplo abaixo
 ```json
   [
     {
@@ -150,16 +149,16 @@ deve receber o exemplo abaixo
     }
   ]
 ```
-Essa rota lista todas as categorias
+* Essa rota lista todas as categorias
 
 ## post http://localhost:4000/categories
 
-deve enviar o exemplo abaixo
+- deve enviar o exemplo abaixo
 ```json
   {
    "name": "Humor"
   }
 ```
-status: 201 Created
-o campo name obrigatório
-Essa rota lista todas as categorias
+* status: 201 Created
+* o campo name obrigatório
+* Essa rota lista todas as categorias
